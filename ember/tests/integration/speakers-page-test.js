@@ -1,6 +1,6 @@
 import Ember from 'ember';
 import startApp from '../helpers/start-app';
-import { module, test } from 'qunit';
+import { module, test, skip } from 'qunit';
 import Pretender from 'pretender';
 
 var App, server;
@@ -9,19 +9,19 @@ module('Integration - Speaker Page', {
   beforeEach: function() {
     App = startApp();
     var speakers = [
-  {
-    id: 1,
-    name: 'Bugs Bunny'
-  },
-{
-  id: 2,
-  name: 'Wile E. Coyote'
-},
-{
-  id: 3,
-  name: 'Yosemite Sam'
-}
-];
+      {
+        id: 1,
+        name: 'Bugs Bunny'
+      },
+      {
+        id: 2,
+        name: 'Wile E. Coyote'
+      },
+      {
+        id: 3,
+        name: 'Yosemite Sam'
+      }
+    ];
 
 server = new Pretender(function() {
   this.get('/api/speakers', function(request) {

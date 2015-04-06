@@ -1,5 +1,5 @@
 import Ember from 'ember';
-import { module, test } from 'qunit';
+import { module, test, skip } from 'qunit';
 import startApp from 'meet-up/tests/helpers/start-app';
 
 var App;
